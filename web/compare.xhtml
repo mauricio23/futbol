@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <h:form class="form-control">  
+            <p:menubar>
+                <p:menuitem value="Futbol" url="index.xhtml"/>
+                 <p:submenu label="opciones" icon="ui-icon-document">
+                  <p:menuitem value="Campeonato" outcome="/campeonato/List" />
+                  <p:separator />
+                  <p:menuitem value="Cancha" outcome="/cancha/List" />
+                  <p:separator />
+                  <p:menuitem value="Equipo" outcome="/equipo/List" />
+                   <p:separator />
+                  <p:menuitem value="EquipoJugador" outcome="/equipoJugador/List" />
+                   <p:separator />
+                  <p:menuitem value="Gol" outcome="/gol/List" />
+                   <p:separator />
+                  <p:menuitem value="Grupo" outcome="/grupo/List" />
+                   <p:separator />
+                  <p:menuitem value="Jugador" outcome="/jugador/List" />
+                   <p:separator />
+                  <p:menuitem value="Partido" outcome="/partido/List" />
+                   <p:separator />
+                  <p:menuitem value="Sancion" outcome="/sancion/List" />
+                   <p:separator />
+                  <p:menuitem value="TipoCampeonato" outcome="/tipoCampeonato/List" />
+                   <p:separator />
+                  <p:menuitem value="TipoSancion" outcome="/tipoSancion/List"  />
+        </p:submenu>
+                <p:submenu label="otros">
+                    <p:menuitem value="Estadios" url="estadios.xhtml"/>
+                    <p:menuitem value="Cracks" url="compare.xhtml"/>
+                </p:submenu>
+
+                <f:facet name="options">
+                    <p:inputText style="margin-right:10px" placeholder="Correo electronico"/>
+                    <p:password id="nonFeedback" placeholder="Contraseña" value="#{passwordView.password1}" />
+                    <p:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
+                </f:facet>
+            </p:menubar>
+        </h:form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <table>
+            <tr>
+                <td>
+                    <p:imageCompare leftImage="/resources/demo/images/compare/masi1.jpg"
+                        rightImage="/resources/demo/images/compare/mesi2.jpg"
+                        width="450" height="435"/>
+                </td>
+                <td>
+                     <p:imageCompare leftImage="/resources/demo/images/compare/cristiano1.jpg"
+                        rightImage="/resources/demo/images/compare/cristiano2.jpg"
+                        width="450" height="435"/>
+                </td>
+            </tr>
+        </table>
+        
+            
+        
+    </h:body>
+</html>
+
